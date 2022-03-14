@@ -11,7 +11,7 @@ var isValid = function (s) {
   
     let arr = [];
     for(let i = 0; i < s.length; i++){
-        if(s[i] in legend){
+        if(s[i] === '(' || s[i] === '{' || s[i] === '['){
            arr.push(s[i])
            } else if(legend[arr.pop()] !== s[i]){
                      return false;
